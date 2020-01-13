@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<datasources schemaLocation="https://docs.jboss.org/ironjacamar/schema/datasources_1_1.xsd">
+    <datasource jta="true" jndi-name="java:jboss/MySql2DSDS" pool-name="MySqlDS" enabled="true" use-ccm="true">
+                    <connection-url>jdbc:mysql://localhost:3306/bmtest</connection-url>
+                    <driver-class>com.mysql.jdbc.Driver</driver-class>
+                    <driver>mysql-connector-java-5.1.48.jar_com.mysql.jdbc.Driver_5_1</driver>
+                    <security>
+                        <user-name>root</user-name>
+                        <password>root</password>
+                    </security>
+                    <validation>
+                        <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"/>
+                        <background-validation>true</background-validation>
+                        <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"/>
+                    </validation>
+                </datasource>
+</datasources>
